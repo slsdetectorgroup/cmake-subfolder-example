@@ -1,2 +1,2 @@
-# cmake-subfolder-example
-A simple example how to use the slsDetectorPackage as a subfolder
+# Using slsDetectorPackage from a subfolder
+A simple example how to use the slsDetectorPackage as a subfolder.
