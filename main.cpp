@@ -1,15 +1,13 @@
-#include "multiSlsDetector.h"
+#include "Detector.h"
 #include <iostream>
 
 int main(){
-    multiSlsDetector det;
-    std::cout << "Detector type is: " << det.getDetectorTypeAsString() << '\n';
+    sls::Detector det;
+    std::cout << "Detector type is: " << det.getDetectorType() << '\n';
     std::cout << "Hostname: " << det.getHostname() << "\n";
 
-    det.setExposureTime(0.5, true);
-    det.setNumberOfFrames(1);
-    det.setExposurePeriod(0);
-    std::cout << "exptime " << det.setExposureTime(-1, true) << " s\n";
+    //Store value in int, if values are different put -1
+    int vb_comp = det.getDAC(sls::defs::VB_COMP, false).squash(-1);
+    std::cout << "The value of vb_comp is " << vb_comp << " for all modules\n";
 
-    det.acquire();
 }

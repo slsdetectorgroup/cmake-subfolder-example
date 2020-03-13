@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 3.9)
+project(myDetectorIntegration)
+cmake_minimum_required(VERSION 3.12)
 add_subdirectory(slsDetectorPackage)
 
 #Add and executable called example
@@ -10,5 +11,5 @@ set_target_properties(example PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
 )
 
-#Link towards slsDetectorShared to get multiDetector etc.
+#Link towards slsDetectorShared
 target_link_libraries(example slsDetectorShared)
