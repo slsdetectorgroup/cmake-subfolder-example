@@ -1,4 +1,4 @@
-#include "Detector.h"
+#include "sls/Detector.h"
 #include <iostream>
 
 int main(){
